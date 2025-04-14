@@ -1,4 +1,4 @@
-import { act, useState } from 'react';
+import { JSX, act, useState } from 'react';
 import './accordion.css';
 
 const faqs = [
@@ -21,25 +21,48 @@ type FAQ = {
   text: string;
 };
 
-const AccordionItem = (props: { index: number; faq: FAQ }) => {
-  const { index, faq } = props;
-  const [active, setActive] = useState(false);
+interface AccordionItemProps {
+  index: number;
+  faq: FAQ;
+  isOpen: boolean;
+  onClick: () => void;
+  children: JSX.Element;
+}
+
+const AccordionItem = (props: AccordionItemProps) => {
+  const { index, faq, isOpen, onClick, children } = props;
   return (
-    <div
-      className={active ? 'item open' : 'item'}
-      onClick={() => setActive((a) => !a)}
-    >
+    <div className={isOpen ? 'item open' : 'item'} onClick={onClick}>
       <p className="number">{index}</p>
       <p className="title">{faq.title}</p>
-      <p className="icon">{active ? '-' : '+'}</p>
-      {active && <div className="content-box">{faq.text}</div>}
+      <p className="icon">{isOpen ? '-' : '+'}</p>
+      {isOpen && <div className="content-box">{children}</div>}
     </div>
   );
 };
 
 const Accordion = () => {
+  const [currentOpen, setCurrentOpen] = useState<number | null>(null);
+
+  const setOpen = (index: number) => {
+    setCurrentOpen(index);
+  };
+
+  const close = () => {
+    setCurrentOpen(null);
+  };
   const renderFAQ = faqs.map((f, index) => {
-    return <AccordionItem index={index} faq={f} key={f.title + index} />;
+    return (
+      <AccordionItem
+        index={index}
+        faq={f}
+        key={f.title + index}
+        isOpen={index === currentOpen}
+        onClick={() => (index === currentOpen ? close() : setOpen(index))}
+      >
+        <p>{f.text}</p>
+      </AccordionItem>
+    );
   });
   return (
     <div className="p-[20px] accordionApp">
