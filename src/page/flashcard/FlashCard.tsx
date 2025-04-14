@@ -52,7 +52,14 @@ const FlashCard = (props: { card: Card }) => {
 
 const FlashCardApp = () => {
   const renderCard = questions.map((c) => <FlashCard key={c.id} card={c} />);
-  return <div className="flashcards">{renderCard}</div>;
+  return (
+    <div>
+      <h1 className="border border-4 border-black w-fit p-4 ml-[20px]">
+        Flash Card
+      </h1>
+      <div className="flashcards">{renderCard}</div>
+    </div>
+  );
 };
 
 type Card = {
