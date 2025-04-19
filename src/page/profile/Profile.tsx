@@ -1,3 +1,5 @@
+import React from 'react';
+
 const Profile = () => {
   return (
     <div className="w-screen h-screen flex flex-row gap-8 font-mono pl-16 border border-8 border-white bg-black text-white leading-tight">
@@ -15,31 +17,39 @@ const Profile = () => {
         </div>
       </div>
       <div className="w-3/10 p-8 text-justify border border-white border-2 italic text-sm bg-white text-black">
-        <p>
-          The Road Goes Ever On Roads go ever ever on, Over rock and under tree,
-          By caves where never sun has shone, By streams that never find the
-          sea; Over snow by winter sown, And through the merry flowers of June,
-          Over grass and over stone, And under mountains in the moon. Roads go
-          ever ever on, Under cloud and under star. Yet feet that wandering have
-          gone Turn at last to home afar. Eyes that fire and sword have seen,
-          And horror in the halls of stone Look at last on meadows green, And
-          trees and hills they long have known. The Road goes ever on and on
-          Down from the door where it began. Now far ahead the Road has gone,
-          And I must follow, if I can, Pursuing it with eager feet, Until it
-          joins some larger way, Where many paths and errands meet. The Road
-          goes ever on and on Down from the door where it began. Now far ahead
-          the Road has gone, And I must follow, if I can, Pursuing it with weary
-          feet, Until it joins some larger way, Where many paths and errands
-          meet. And whither then? I cannot say. The Road goes ever on and on Out
-          from the door where it began. Now far ahead the Road has gone. Let
-          others follow, if they can! Let them a journey new begin. But I at
-          last with weary feet Will turn towards the lighted inn, My
-          evening-rest and sleep to meet.
-          <br />
-          <span className="font-bold">
-            ― J.R.R. Tolkien, The Lord of the Rings
-          </span>
-        </p>
+        <h2 className="text-2xl font-bold mb-4">The Road Goes Ever On</h2>
+        <p>The Road goes ever on and on</p>
+        <p>Down from the door where it began.</p>
+        <p>Now far ahead the Road has gone,</p>
+        <p>And I must follow, if I can,</p>
+        <p>Pursuing it with eager feet,</p>
+        <p>Until it joins some larger way,</p>
+        <p>Where many paths and errands meet.</p>
+
+        <br />
+
+        <p>The Road goes ever on and on</p>
+        <p>Down from the door where it began.</p>
+        <p>Now far ahead the Road has gone,</p>
+        <p>And I must follow, if I can,</p>
+        <p>Pursuing it with weary feet,</p>
+        <p>Until it joins some larger way,</p>
+        <p>Where many paths and errands meet.</p>
+
+        <br />
+
+        <p>And whither then? I cannot say.</p>
+        <p>The Road goes ever on and on</p>
+        <p>Out from the door where it began.</p>
+        <p>Now far ahead the Road has gone.</p>
+        <p>Let others follow, if they can!</p>
+        <p>Let them a journey new begin.</p>
+        <p>But I at last with weary feet</p>
+        <p>Will turn towards the lighted inn,</p>
+        <p>My evening-rest and sleep to meet.</p>
+        <span className="font-bold">
+          ― J.R.R. Tolkien, The Lord of the Rings
+        </span>
       </div>
     </div>
   );
