@@ -3,4 +3,9 @@
 body {
   color: #343a40;
   line-height: 1;
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: inherit;
 }
