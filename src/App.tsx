@@ -1,6 +1,8 @@
+/*
 import Accordion from './page/accordion/Accordion';
 import BillSplit from './page/billsplit/BillSplit';
 import FlashCardApp from './page/flashcard/FlashCard';
+*/
 import Profile from './page/profile/Profile';
 
 const App = () => {
