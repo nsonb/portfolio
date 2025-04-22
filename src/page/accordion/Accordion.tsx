@@ -1,4 +1,4 @@
-import { JSX, act, useState } from 'react';
+import { JSX, useState } from 'react';
 import './accordion.css';
 
 const faqs = [
